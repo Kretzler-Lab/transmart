@@ -70,8 +70,9 @@
 	    <table style="width:auto; border:0px; text-align:center; margin:auto;" align="center">
 		<tr>
 		    <td style="text-align:center;vertical-align:middle;margin-left:-40px;padding-top:20px;">
-			<g:link controller="RWG"><img src="${cms.image(name: 'transmartlogo.jpg')}" alt="Transmart"/></g:link>
-		    </td>
+				<g:link controller="RWG" action="index"><img
+						src="${resource(dir: 'images', file: grailsApplication.config.com.recomdata.largeLogo)}"
+						alt="Transmart"/></g:link>		    </td>
 		</tr>
 		<tr><td>&nbsp;</td></tr>
 		<tr>
