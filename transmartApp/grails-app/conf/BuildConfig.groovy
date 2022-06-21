@@ -196,7 +196,7 @@ grails.project.dependency.resolution = {
 	    compile ':transmart-gwas:'            + tmVersion
 	    compile ':transmart-gwas-plink:'      + tmVersion
 ////	    compile ':dalliance-plugin:'          + tmVersion
-	    compile ':transmart-mydas:'           + tmVersion
+////	    compile ':transmart-mydas:'           + tmVersion
 	    compile ':transmart-rest-api:'        + tmVersion
 ////	    compile ':transmart-shared:'          + tmVersion
 	    compile ':spring-security-auth0:'     + tmVersion
@@ -232,7 +232,7 @@ dm?.with {
     configureInternalPlugin 'compile', 'transmart-gwas'
     configureInternalPlugin 'runtime', 'transmart-gwas-plink'
 //    configureInternalPlugin 'runtime', 'dalliance-plugin'
-    configureInternalPlugin 'runtime', 'transmart-mydas'
+//    configureInternalPlugin 'runtime', 'transmart-mydas'
     configureInternalPlugin 'runtime', 'transmart-rest-api'
     configureInternalPlugin 'runtime', 'transmart-shared'
     configureInternalPlugin 'runtime', 'galaxy-export-plugin'
