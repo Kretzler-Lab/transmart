@@ -81,19 +81,41 @@ span.utilMenuSeparator {
     <g:set var='buildNumber'><g:meta name='environment.BUILD_NUMBER'/></g:set>
     <g:set var='buildId'><g:meta name='environment.BUILD_ID'/></g:set>
     <div id="utilitiesMenu">
-	<ul id="utilitiesMenuList">
-            <li><a href="#" onclick="jQuery('#utilitiesMenu').hide();
-				     popupWindow('${grailsApplication.config.com.recomdata.adminHelpURL}', '_help')">Help</a></li>
-            <g:if test="${grailsApplication.config.com.recomdata.containsKey("bugreportURL")}">
-		<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();
-					 window.open('${grailsApplication.config.com.recomdata.bugreportURL}')">Report a Bug</a></li>
+    <div id="utilitiesMenuList">
+        <div>Help</div>
+		<ul class="subMenu">
+			<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.com.recomdata.adminHelpURL}', '_help')">Transmart Wiki</a></li>
+			<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.quickStartURL}', '_quick_start')">Quick Start Guide</a></li>
+			<g:if test="${grailsApplication.config.selectingDataURL != null && !grailsApplication.config.selectingDataURL.isEmpty()}">
+				<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.selectingDataURL}', '_selecting_data')">Selecting Data</a></li>
+			</g:if>
+
+			<g:if test="${grailsApplication.config.scatterPlotURL != null && !grailsApplication.config.scatterPlotURL.isEmpty()}">
+				<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.scatterPlotURL}', '_scatter_plot')">Scatter Plot</a></li>
+			</g:if>
+			<g:if test="${grailsApplication.config.boxPlotURL != null && !grailsApplication.config.boxPlotURL.isEmpty()}">
+				<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.boxPlotURL}', '_box_plot')">Box Plot</a></li>
+			</g:if>
+			<g:if test="${grailsApplication.config.diffexURL != null && !grailsApplication.config.diffexURL.isEmpty()}">
+				<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.diffexURL}', '_diff_ex')">Differential Expression</a></li>
+			</g:if>
+            <g:if test="${grailsApplication.config.metabolitesURL != null && !grailsApplication.config.metabolitesURL.isEmpty()}">
+                <li><a href="${grailsApplication.config.metabolitesURL}">Metabolites in tranSMART</a></li>
             </g:if>
-            <li><a onclick="jQuery('#utilitiesMenu').hide();" href="mailto:${grailsApplication.config.com.recomdata.contactUs}">Contact Us</a></li>
-            <li><a href="#" onclick="jQuery('#utilitiesMenu').hide();alert('${grailsApplication.config.com.recomdata.appTitle}', 'Build Version: ${buildNumber} - ${buildId}')">About</a></li>
-            <li class="utilMenuSeparator"><span class="utilMenuSeparator">&nbsp;</span></li>
-	    <g:userProfile/>
-            <li><a href="${createLink(controller: 'changeMyPassword', action: 'show')}">Change My Password</a></li>
-            <li><a href="${createLink(controller: 'login', action: 'forceAuth')}">Log Out</a></li>
-	</ul>
+            <g:if test="${grailsApplication.config.proteinsURL != null && !grailsApplication.config.proteinsURL.isEmpty()}">
+                <li><a href="${grailsApplication.config.proteinsURL}">Proteins in tranSMART</a></li>
+            </g:if>
+		</ul>
+        <li class="utilMenuSeparator"><span class="utilMenuSeparator">&nbsp;</span></li>
+		<ul>
+        	<g:if test="${grailsApplication.config.com.recomdata.containsKey("bugreportURL")}">
+            	<li><a href="#" onclick="jQuery('#utilitiesMenu').hide();window.open('${grailsApplication.config.com.recomdata.bugreportURL}')">Report a Bug</a></li>
+        	</g:if>
+        	<li><a onclick="jQuery('#utilitiesMenu').hide();" href="mailto:${grailsApplication.config.com.recomdata.contactUs}">Contact Us</a></li>
+        	<li class="utilMenuSeparator"><span class="utilMenuSeparator">&nbsp;</span></li>
+        	<li><a href="${createLink(controller: 'changeMyPassword', action: 'show')}">Change My Password</a></li>
+        	<li><a href="${createLink(controller: 'login', action: 'forceAuth')}">Log Out</a></li>
+		</ul>
     </div>
+</div>
 </th>
