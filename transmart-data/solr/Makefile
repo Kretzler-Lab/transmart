@@ -2,7 +2,7 @@ include ../makefile.inc
 
 include ../lib/makefile.inc
 
-SOLR_DL=http://files.thehyve.net/solr
+SOLR_DL=https://archive.apache.org/dist/lucene/solr
 SOLR_VERSION=4.5.0
 SOLR_PREFIX ?= $(realpath .)
 SOLR_LOG ?= $(realpath .)/solr.log
@@ -37,7 +37,7 @@ $(DRIVER): $(JDBC_DRIVER_PATH)
 
 solr: solr-$(SOLR_VERSION).tgz
 	$(TAR_COMMAND) xzf $< --touch --strip-components=2 \
-		--exclude $(SOLR_VERSION)/solr/collection1 \
+		--exclude solr-$(SOLR_VERSION)/example/solr/collection1 \
 		solr-$(SOLR_VERSION)/example/solr
 
 solr/collection1:
