@@ -51,9 +51,7 @@
 		</tr>				
 		<tr>
 		    <td>
-			<g:if test="${zipLocation}">
-			    <a class='AnalysisLink' class='downloadLink' href="${resource(file: zipLocation)}">Download raw R data</a>
-			</g:if>
+				<g:render template="/plugin/downloadRawDataLink" />
 		    </td>
 		</tr>		
 		<tr>
