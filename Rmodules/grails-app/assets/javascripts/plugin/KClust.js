@@ -68,7 +68,7 @@ KMeansClusteringView.prototype.get_form_params = function () {
         var inputConceptPathVar = readConceptVariables("divIndependentVariable");
         var clusters = inputArray[1].el.value;
         var maxDrawNum = inputArray[2].el.value;
-        var calculateZscore = inputArray[3].el.checked;
+        var calculateZscore = true;
 
         // assign values to form parameters
         formParameters['jobType'] = 'RKClust';

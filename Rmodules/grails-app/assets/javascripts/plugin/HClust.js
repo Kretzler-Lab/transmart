@@ -68,7 +68,7 @@ HierarchicalClusteringView.prototype.get_form_params = function () {
         var maxDrawNum = inputArray[1].el.value;
         var doClusterRows = inputArray[2].el.checked;
         var doClusterColumns = inputArray[3].el.checked;
-        var calculateZscore = inputArray[4].el.checked;
+        var calculateZscore = true;
 
         // assign values to form parameters
         formParameters['jobType'] = 'RHClust';
