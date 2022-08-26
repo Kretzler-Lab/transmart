@@ -161,3 +161,4 @@
 **/logback.groovy
 
 build-*.out
+.settings
