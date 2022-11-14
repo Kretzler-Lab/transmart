@@ -13,13 +13,13 @@
 	    <span id="selectedAnalysis" class="warning">WARNING: Analysis is not selected</span>
 
 	    <a href='/transmartmanual/advanced_workflow.html'>
-		<asset:image src="help/helpicon_white.jpg" alt="Help" border="0"
-		     width="18pt" style="margin-top:1pt;margin-bottom:1pt;margin-right:18pt;"/>
-	    </a>
+%{--		<asset:image src="help/helpicon_white.jpg" alt="Help" border="0"--}%
+%{--		     width="18pt" style="margin-top:1pt;margin-bottom:1pt;margin-right:18pt;"/>--}%
+%{--	    </a>--}%
 	
 	    <input type="hidden" id="analysis" name="analysis"/>
 	</label>
-	<hr style="height: 1px;"/>
+	<hr style="height: 1px; padding-bottom: 5px; margin-top: 5px;/>
 	%{--display selected cohort--}%
 	<g:logMsg>render dataAssociation empty page</g:logMsg>
         <label for="cohortSummary">
