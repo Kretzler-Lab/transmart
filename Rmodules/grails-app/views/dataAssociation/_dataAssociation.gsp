@@ -24,7 +24,7 @@
 	%{--display selected cohort--}%
 	<label for="cohortSummary">
 		<span>Cohorts:</span>
-		<span id="cohortWarningMsg" style="color: green">WARNING: You have not selected a study and the analysis will not work. Please go back to the Comparison tab and make a cohort selection.
+		<span id="cohortWarningMsg" style="color: red">WARNING: You have not selected a study and the analysis will not work. Please go back to the Comparison tab and make a cohort selection.
 		</span>
 		<div id="cohortSummary"></div>
 	</label>
