@@ -10,7 +10,7 @@
 	%{--display selected analysis--}%
 	<label for="selectedAnalysis">
 		<span>Analysis:</span>
-		<span id="selectedAnalysis" class="gentle_warning">Select an analysis from the drop-down menu above</span>
+		<span id="selectedAnalysis" style="color: green" class="gentle_warning">Select an analysis from the drop-down menu above</span>
 
 		%{-- TBD: help hyperlink
         <a href='JavaScript:D2H_ShowHelp(1503,helpURL,"wndExternal",CTXT_DISPLAY_FULLHELP )'>
@@ -20,11 +20,12 @@
 
 		<input type="hidden" id="analysis" name="analysis"/>
 	</label>
-	<hr style="height: 1px;"/>
+	<hr style="height: 1px; margin-top: 5px"/>
 	%{--display selected cohort--}%
 	<label for="cohortSummary">
 		<span>Cohorts:</span>
-		<span id="cohortWarningMsg" class="warning"></span>
+		<span id="cohortWarningMsg" style="color: green">WARNING: You have not selected a study and the analysis will not work. Please go back to the Comparison tab and make a cohort selection.
+		</span>
 		<div id="cohortSummary"></div>
 	</label>
     </div>
