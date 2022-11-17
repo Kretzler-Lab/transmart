@@ -9,10 +9,10 @@
 
 	    <h2>
 		Variable Selection
-		<a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.hierarchicalClustering ?: 'transmartmanual/advanced_workflow.html#hierarchical-clustering'}">
-		    <asset:image src="help/helpicon_white.jpg" alt="Help" border="0"
-		     width="18pt" style="margin-top:1pt;margin-bottom:1pt;margin-right:18pt;"/>
-		</a>
+%{--		<a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.hierarchicalClustering ?: 'transmartmanual/advanced_workflow.html#hierarchical-clustering'}">--}%
+%{--		    <asset:image src="help/helpicon_white.jpg" alt="Help" border="0"--}%
+%{--		     width="18pt" style="margin-top:1pt;margin-bottom:1pt;margin-right:18pt;"/>--}%
+%{--		</a>--}%
 	    </h2>
 
 	    <div id="analysisForm">
