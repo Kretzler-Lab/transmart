@@ -9,9 +9,9 @@
 
 	    <h2>
 		Variable Selection
-		<a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.kMeansClustering ?: '/transmartmanual/advanced_workflow.html#k-means-clustering'}">
-		    <asset:image src="help/helpicon_white.jpg" alt="Help"/>
-		</a>
+%{--		<a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.kMeansClustering ?: '/transmartmanual/advanced_workflow.html#k-means-clustering'}">--}%
+%{--		    <asset:image src="help/helpicon_white.jpg" alt="Help"/>--}%
+%{--		</a>--}%
 	    </h2>
 
 	    <form id="analysisForm">
