@@ -33,9 +33,9 @@
 
 		    <label for="txtMaxDrawNumber">
 			Max rows to display:
-			    <a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.heatMapMaxRows ?: '/transmartmanual/advanced_workflow.html#max-rows-to-display'}">
+%{--			    <a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.heatMapMaxRows ?: '/transmartmanual/advanced_workflow.html#max-rows-to-display'}">
 			    <asset:image src="help/helpicon_white.jpg" alt="Help"/>
-			</a>
+			</a>--}%
 		    </label>
 		    <input type="text" id="txtMaxDrawNumber"  value="50"/>
 
