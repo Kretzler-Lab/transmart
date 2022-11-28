@@ -22,9 +22,12 @@ Heatmap.loader <- function(
 input.filename,
 output.file = "Heatmap",
 meltData = TRUE,
+	
+# Note: These settings don't appear to actually affect the final image size or label size	
 imageWidth = 1200,
 imageHeight = 800,
 pointsize = 15,
+	
 maxDrawNumber = Inf,
 color.range.clamps = c(-2.5,2.5),
 aggregate.probes = FALSE,
@@ -222,8 +225,8 @@ plotHeatmap <- function(data, colcolors, color.range.clamps, output.file = "Heat
               breaks = seq(color.range.clamps[1], color.range.clamps[2], length.out = 800 + 1),
               sepwidth = c(0, 0),
               margins = c(0, 0),
-              cexRow = 1.7, #hmPars$labelPointSize,
-              cexCol = 1.7, #hmPars$labelPointSize,
+              cexRow = 1.5, #hmPars$labelPointSize,
+              cexCol = 1.5, #hmPars$labelPointSize,
               scale = "none",
               dendrogram = "none",
               Rowv = NA,
