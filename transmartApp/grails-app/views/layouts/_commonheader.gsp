@@ -71,6 +71,7 @@
                             [id: 'gwas', title: 'GWAS', controller: 'GWAS', display: !tabsConfig.gwas.hide],
                             [id: 'uploaddata', title: 'Upload Data', controller: 'uploadData', display: !tabsConfig.uploadData.hide],
                             [id: 'accesslog', title: 'Admin', controller: 'accessLog', display: SpringSecurityUtils.ifAnyGranted('ROLE_ADMIN')]
+                            [id: 'dataAttestation', title: "Data Attestation", controller: 'dataAttestation', display: !tabsConfig.dataAttestation.hide]
 
                     ])}"/>
                     <g:each in="${tabs}" var="tab">
