@@ -43,6 +43,7 @@ ui {
             analysisJobs.show = false
             workspace.hide = false
 	    xnatViewer.show = false
+        dataAttestation.hide = true
         }
     }
     /*
