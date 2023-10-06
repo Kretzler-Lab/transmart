@@ -1482,6 +1482,7 @@ class ConfigService {
             else if(k == 'ui.tabs.sampleExplorer.hide'){addConfig(uiParams,k,v,'')}
             else if(k == 'ui.tabs.search.show'){addConfig(uiParams,k,v,'')}
             else if(k == 'ui.tabs.uploadData.hide'){addConfig(uiParams,k,v,'')}
+            else if(k == 'ui.tabs.dataAttestation.hide'){addConfig(uiParams,k,v,'')}
 
             // upload
             else if(k == 'com.recomdata.dataUpload.appTitle'){addConfig(uploadParams,k,v,'')}
