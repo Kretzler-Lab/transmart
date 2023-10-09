@@ -1481,7 +1481,7 @@ if [ $buildwar == 1 ] ; then
     if [ $cleangrails == 1 ] || [ $buildcoretests == 1 ] ; then
 	./grailsw clean-all
 	# initial build to resolve transmart-core-db-tests
-	./grailsw war              > $OUT/$PREFIX-$DIR.out 2>&1
+	./grailsw war              
     fi
 
     ./grailsw --stacktrace --verbose war            > $OUT/$PREFIX-$DIR.out 2>&1
