@@ -136,17 +136,12 @@
 								<br>
 						    </td>
 						</tr>
-						<g:if test="${adminEmail}">
-						    <tr>
 							<td colspan="2" style="font-size:10px;">
-							    Not a user ? Contact <a
-										     href="mailto:${adminEmail}"
-										     target="_blank"
-										     style="text-decoration:underline;color:#0000FF">administrator</a>
-							    to request an account.
+								Not a user ? Contact <a
+									href="mailto:${grailsApplication.config.com.recomdata.adminEmail}"
+									target="_blank"
+									style="text-decoration:underline;color:#0000FF">administrator</a> to request an account.
 							</td>
-						    </tr>
-						</g:if>
 						<g:if test="${samlEnabled}">
 						    <tr>
 							<td colspan="2" style="font-size:10px;">
