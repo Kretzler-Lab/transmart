@@ -41,7 +41,7 @@
 	</th>
         <th class="menuBar" style="width: 190px">
 	    <g:if test="${'rwg' == app || 'datasetExplorer' == app}">
-		<input id="search-ac"/>
+		<input id="search-ac" placeholder="Search..."/>
 	    </g:if>
 	</th>
         <th class="menuBar" style="width: 110px">
