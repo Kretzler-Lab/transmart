@@ -13,9 +13,9 @@
         <div id="clearbutton" class="greybutton filterbrowser">
             <a href="#" onclick="clearSearch(); return false;">Clear</a>
         </div>
-        <div id="filterbutton" class="greybutton filterbrowser">
-            <asset:image src="filter.png"/> Filter
-        </div>
+%{--        <div id="filterbutton" class="greybutton filterbrowser">--}%
+%{--            <asset:image src="filter.png"/> Filter--}%
+%{--        </div>--}%
     </div>
 
     <div id="active-search-div" class="boxcontent">
