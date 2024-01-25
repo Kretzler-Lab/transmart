@@ -71,7 +71,7 @@
 		<tr>
 		    <td style="text-align:center;vertical-align:middle;margin-left:-40px;padding-top:20px;">
 				<g:link controller="RWG" action="index"><img
-						src="${cms.image(name: grailsApplication.config.com.recomdata.largeLogo)}"
+						src="${resource(dir: 'images', file: grailsApplication.config.com.recomdata.largeLogo)}"
 						alt="Transmart"/></g:link>		    </td>
 		</tr>
 		<tr><td>&nbsp;</td></tr>
