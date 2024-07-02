@@ -5,11 +5,7 @@ LIB_DIR          := $(dir $(lastword $(MAKEFILE_LIST)))
 # ----------------------------
 
 JDBC_DL_PSQL     := https://jdbc.postgresql.org/download
-<<<<<<< HEAD
-JDBC_DRIVER_PSQL := postgresql-42.6.0.jar
-=======
 JDBC_DRIVER_PSQL := postgresql-42.7.2.jar
->>>>>>> c53d35a42... Fix conflicts
 
 JDBC_DRIVER_PSQL_PATH := $(LIB_DIR)$(JDBC_DRIVER_PSQL)
 
