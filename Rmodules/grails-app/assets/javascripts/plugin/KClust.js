@@ -69,6 +69,7 @@ KMeansClusteringView.prototype.get_form_params = function () {
         var clusters = inputArray[1].el.value;
         var maxDrawNum = inputArray[2].el.value;
         var calculateZscore = true;
+        var pxPerCell = "";
 
         // assign values to form parameters
         formParameters['jobType'] = 'RKClust';
@@ -77,6 +78,8 @@ KMeansClusteringView.prototype.get_form_params = function () {
         formParameters['txtClusters'] = clusters;
         formParameters['txtMaxDrawNumber'] = maxDrawNum;
         formParameters['calculateZscore'] = calculateZscore;
+        formParameters['txtPixelsPerCell'] = pxPerCell;
+
 
         //get analysis constraints
         var constraints_json = this.get_analysis_constraints('RKClust');
