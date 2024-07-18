@@ -12,7 +12,7 @@ if ! type java >/dev/null 2>&1; then
     exit 1
 fi
 
-export JAVA_OPTS="$JAVA_OPTS -Xms2048m -Xmx8192m"
+export JAVA_OPTS="$JAVA_OPTS -Xms4G -Xmx4G"
 
 PREFIX="build"
 OUT=`pwd`

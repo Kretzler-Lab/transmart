@@ -68,6 +68,7 @@ HeatMapView.prototype.get_form_params = function () {
         var maxDrawNum = inputArray[1].el.value;
         var doGroupBySubject = inputArray[2].el.checked;
         var calculateZscore = true;
+        var pxPerCell = "";
 
         // assign values to form parameters
         formParameters['jobType'] = 'RHeatmap';
@@ -75,6 +76,7 @@ HeatMapView.prototype.get_form_params = function () {
         formParameters['variablesConceptPaths'] = inputConceptPathVar;
         formParameters['txtMaxDrawNumber'] = maxDrawNum;
         formParameters['doGroupBySubject'] = doGroupBySubject;
+        formParameters['txtPixelsPerCell'] = pxPerCell;
         formParameters['calculateZscore'] = calculateZscore;
 
         // get analysis constraints

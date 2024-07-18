@@ -69,6 +69,7 @@ HierarchicalClusteringView.prototype.get_form_params = function () {
         var doClusterRows = inputArray[2].el.checked;
         var doClusterColumns = inputArray[3].el.checked;
         var calculateZscore = true;
+        var pxPerCell = "";
 
         // assign values to form parameters
         formParameters['jobType'] = 'RHClust';
@@ -77,6 +78,7 @@ HierarchicalClusteringView.prototype.get_form_params = function () {
         formParameters['txtMaxDrawNumber'] = maxDrawNum;
         formParameters['doClusterRows'] = doClusterRows;
         formParameters['doClusterColumns'] = doClusterColumns;
+        formParameters['txtPixelsPerCell'] = pxPerCell;
         formParameters['calculateZscore'] = calculateZscore;
 
         //get analysis constraints
