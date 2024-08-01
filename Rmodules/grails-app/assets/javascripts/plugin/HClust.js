@@ -67,8 +67,8 @@ HierarchicalClusteringView.prototype.get_form_params = function () {
         var inputConceptPathVar = readConceptVariables("divIndependentVariable");
         var maxDrawNum = inputArray[1].el.value;
         var pxPerCell = ""
-        var doClusterRows = inputArray[3].el.checked;
-        var doClusterColumns = inputArray[4].el.checked;
+        var doClusterRows = inputArray[2].el.checked;
+        var doClusterColumns = inputArray[3].el.checked;
         var calculateZscore = true;
 
         // assign values to form parameters
