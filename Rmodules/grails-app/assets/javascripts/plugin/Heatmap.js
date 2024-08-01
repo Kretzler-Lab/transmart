@@ -68,7 +68,7 @@ HeatMapView.prototype.get_form_params = function () {
         // get values
         var inputConceptPathVar = readConceptVariables("divIndependentVariable");
         var maxDrawNum = inputArray[1].el.value;
-        var pxPerCell = inputArray[2].el.value;
+        var pxPerCell = "";
         var doGroupBySubject = inputArray[3].el.checked;
         var calculateZscore = true;
 
