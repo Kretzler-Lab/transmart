@@ -121,11 +121,6 @@ HeatMapView.prototype.get_inputs = function (form_params) {
             "validations" : [{type:"INTEGER", min:1}]
         },
         {
-            "label" : "Pixels per Cell",
-            "el" : document.getElementById("txtPixelsPerCell"),
-            "validations" : [{type:"INTEGER", min:10, max:50}]
-        },
-        {
             "label" : "Do Group by Subject",
             "el" : document.getElementById("chkGroupBySubject"),
             "validations" : []
