@@ -95,7 +95,6 @@ span.utilMenuSeparator {
         <div id="utilitiesMenuList">
             <div>Help</div>
             <ul class="subMenu">
-                <li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.com.recomdata.adminHelpURL}', '_help')">Transmart Wiki</a></li>
                 <li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.quickStartURL}', '_quick_start')">Quick Start Guide</a></li>
                 <g:if test="${grailsApplication.config.selectingDataURL != null && !grailsApplication.config.selectingDataURL.isEmpty()}">
                     <li><a href="#" onclick="jQuery('#utilitiesMenu').hide();popupWindow('${grailsApplication.config.selectingDataURL}', '_selecting_data')">Selecting Data</a></li>
