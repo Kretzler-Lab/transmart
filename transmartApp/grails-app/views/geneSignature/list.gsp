@@ -27,10 +27,12 @@
 
 		<p style="text-align: right;"><span class="button"><g:actionSubmit class="edit" action="createWizard" value="New Signature"/></span></p>
 
-		<h1>Gene Signature Lists &nbsp;&nbsp;<a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.geneSignatureList ?: '/transmartmanual/gene_lists.html'}">
-			<asset:image src="help/helpicon_white.jpg" alt="Help" border="0"
-				     width="18pt" style="vertical-align:middle;margin-left:5pt;"/>
-		</a></h1>
+		<h1>Gene Signature Lists &nbsp;&nbsp;
+%{--			<a target="_blank" href="${grailsApplication.config.org.transmartproject.helpUrls.geneSignatureList ?: '/transmartmanual/gene_lists.html'}">--}%
+%{--			<asset:image src="help/helpicon_white.jpg" alt="Help" border="0"--}%
+%{--				     width="18pt" style="vertical-align:middle;margin-left:5pt;"/>--}%
+%{--			</a>--}%
+		</h1>
 
 		<!-- show my signatures -->
 		<table id="mySignatures"  class="detail" style="width: 100%">
@@ -89,10 +91,12 @@
 		<br>
 
 		<p style="text-align: right;"><span class="button"><g:actionSubmit class="edit" action="createListWizard" value="New Gene/RSID List"/></span></p>
-		<h1>Gene/RSID Lists &nbsp;&nbsp;<a target="_blank" HREF="${grailsApplication.config.org.transmartproject.helpUrls.rsIdSignatureList ?: '/transmartmanual/gene_lists.html'}">
-			<asset:image src="help/helpicon_white.jpg" alt="Help"
-				     border="0" width="18pt" style="vertical-align:middle;margin-left:5pt;"/>
-		</a></h1>
+		<h1>Gene/RSID Lists &nbsp;&nbsp;
+%{--			<a target="_blank" HREF="${grailsApplication.config.org.transmartproject.helpUrls.rsIdSignatureList ?: '/transmartmanual/gene_lists.html'}">--}%
+%{--			<asset:image src="help/helpicon_white.jpg" alt="Help"--}%
+%{--				     border="0" width="18pt" style="vertical-align:middle;margin-left:5pt;"/>--}%
+%{--			</a>--}%
+		</h1>
 
 		<!-- show my lists -->
 		<table id="myLists"  class="detail" style="width: 100%">
