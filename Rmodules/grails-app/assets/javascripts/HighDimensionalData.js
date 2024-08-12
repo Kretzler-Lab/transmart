@@ -332,15 +332,7 @@ HighDimensionalData.prototype.generate_view = function () {
                 discardUrl: true,
                 method: 'GET'
             },
-            tools: [
-                {
-                    id: 'help',
-                    qtip: 'Click for context sensitive help',
-                    handler: function (event, toolEl, panel) {
-                        window.open(GLOBAL.HelpHighdimensionalURL, '_blank').focus();
-                    }
-                }
-            ]
+            tools: []
         });
     }
 
