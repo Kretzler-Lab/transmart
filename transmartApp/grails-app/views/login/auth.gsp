@@ -121,14 +121,6 @@
 						    </td>
 						</tr>
 						<tr>
-						    <td>
-							<label for='remember_me' style="font-weight:bold">Remember me :</label>
-						    </td>
-						    <td>
-							<input type='checkbox' class='chk' name='_spring_security_remember_me' id='remember_me' />
-						    </td>
-						</tr>
-						<tr>
 						    <td colspan=2 style="text-align:center">
 							<br>
 							    <input type='submit' id='loginButton' value='Login' style="width:100%"/>
@@ -136,17 +128,15 @@
 								<br>
 						    </td>
 						</tr>
-						<g:if test="${adminEmail}">
 						    <tr>
 							<td colspan="2" style="font-size:10px;">
 Not a user ? Contact <a
-										     href="mailto:${grailsApplication.config.com.recomdata}"
+										     href="mailto:${grailsApplication.config.com.recomdata.adminEmail}"
 										     target="_blank"
 										     style="text-decoration:underline;color:#0000FF">administrator</a>
 							    to request an account.
 							</td>
 						    </tr>
-						</g:if>
 						<g:if test="${samlEnabled}">
 						    <tr>
 							<td colspan="2" style="font-size:10px;">
