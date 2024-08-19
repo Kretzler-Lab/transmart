@@ -125,11 +125,6 @@ KMeansClusteringView.prototype.get_inputs = function (form_params) {
             "validations" : [{type:"INTEGER", min:1}]
         },
         {
-            "label" : "Pixels per Cell",
-            "el" : document.getElementById("txtPixelsPerCell"),
-            "validations" : [{type:"INTEGER", min:10, max:50}]
-        },
-        {
             "label" : "Calculate z-score on the fly",
             "el" : document.getElementById("chkCalculateZscore"),
             "validations" : []

@@ -67,8 +67,8 @@ HierarchicalClusteringView.prototype.get_form_params = function () {
         var inputConceptPathVar = readConceptVariables("divIndependentVariable");
         var maxDrawNum = inputArray[1].el.value;
         var pxPerCell = ""
-        var doClusterRows = inputArray[3].el.checked;
-        var doClusterColumns = inputArray[4].el.checked;
+        var doClusterRows = inputArray[2].el.checked;
+        var doClusterColumns = inputArray[3].el.checked;
         var calculateZscore = true;
 
         // assign values to form parameters
@@ -118,11 +118,6 @@ HierarchicalClusteringView.prototype.get_inputs = function (form_params) {
             "label" : "Max Rows to Display",
             "el" : document.getElementById("txtMaxDrawNumber"),
             "validations" : [{type:"INTEGER", min:1}]
-        },
-        {
-            "label" : "Pixels per Cell",
-            "el" : document.getElementById("txtPixelsPerCell"),
-            "validations" : [{type:"INTEGER", min:10, max:50}]
         },
         {
             "label" : "Do cluster rows",

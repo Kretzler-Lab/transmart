@@ -69,7 +69,7 @@ HeatMapView.prototype.get_form_params = function () {
         var inputConceptPathVar = readConceptVariables("divIndependentVariable");
         var maxDrawNum = inputArray[1].el.value;
         var pxPerCell = "";
-        var doGroupBySubject = inputArray[3].el.checked;
+        var doGroupBySubject = inputArray[2].el.checked;
         var calculateZscore = true;
 
         // assign values to form parameters
@@ -119,11 +119,6 @@ HeatMapView.prototype.get_inputs = function (form_params) {
             "label" : "Max Rows to Display",
             "el" : document.getElementById("txtMaxDrawNumber"),
             "validations" : [{type:"INTEGER", min:1}]
-        },
-        {
-            "label" : "Pixels per Cell",
-            "el" : document.getElementById("txtPixelsPerCell"),
-            "validations" : [{type:"INTEGER", min:10, max:50}]
         },
         {
             "label" : "Do Group by Subject",
