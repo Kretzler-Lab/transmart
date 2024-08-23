@@ -1019,15 +1019,6 @@ Ext.onReady(function () {
                 }
             }
         ];
-        if (GLOBAL.hiDomePopUpHelpURL) {
-            omicsFilterWinButtons.push({
-                text: 'Help',
-                handler: function () {
-                    window.open(GLOBAL.hiDomePopUpHelpURL, '_blank').focus();
-                },
-                iconCls : 'contextHelpBtn'
-            });
-        }
         omicsfilterwin = new Ext.Window({
             id: 'omicsFilterWindow',
             title: '',
