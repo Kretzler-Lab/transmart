@@ -5,7 +5,7 @@ import org.transmartproject.core.exceptions.InvalidArgumentsException
 //import org.transmartproject.core.ontology.BoundModifier
 class ConceptsController {
 
-    def conceptsResourceService
+    ConceptsResource conceptsResourceService
     def i2b2HelperService
     def springSecurityService
 
@@ -13,9 +13,9 @@ class ConceptsController {
         render conceptsResourceService.allCategories as JSON
     }
 
-    def getChildren() {
+    def getChildren(String concept_key) {
         def user = AuthUser.findByUsername(springSecurityService.getPrincipal().username)
-        def parentConceptKey = params.get('concept_key')
+        def parent = conceptsResourceService.getByKey(concept_key)
         def parent = conceptsResourceService.getByKey(parentConceptKey)
         def childrenWithTokens = i2b2HelperService.getChildPathsWithTokensFromParentKey(parentConceptKey)
         def childrenWithAuth = i2b2HelperService.getAccess(childrenWithTokens, user)
@@ -30,16 +30,11 @@ class ConceptsController {
         render authChildren as JSON
     }
 
-    def getResource() {
-        def concept = params.get('concept_key')
-        render conceptsResourceService.getByKey(concept) as JSON
+   def getResource(String concept_key) {
+	    render(conceptsResourceService.getByKey(concept_key) as JSON)
     }
 
-    def getModifierChildren() {
-        def modifierKey = params.get('modifier_key')
-        def appliedPath = params.get('applied_path')
-        def qualifiedTermKey = params.get('qualified_term_key')
-
+    def getModifierChildren(String modifier_key, String applied_path, String qualified_term_key) {
         if (!modifierKey || !appliedPath || !qualifiedTermKey) {
             throw new InvalidArgumentsException('Missing arguments')
         }
