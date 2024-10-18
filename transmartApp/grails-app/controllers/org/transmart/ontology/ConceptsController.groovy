@@ -3,6 +3,7 @@ import grails.converters.JSON
 import org.transmart.searchapp.AuthUser
 import org.transmartproject.core.exceptions.InvalidArgumentsException
 //import org.transmartproject.core.ontology.BoundModifier
+import org.transmartproject.core.ontology.ConceptsResource
 class ConceptsController {
 
     ConceptsResource conceptsResourceService
