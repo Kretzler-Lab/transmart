@@ -17,8 +17,7 @@ class ConceptsController {
     def getChildren(String concept_key) {
         def user = AuthUser.findByUsername(springSecurityService.getPrincipal().username)
         def parent = conceptsResourceService.getByKey(concept_key)
-        def parent = conceptsResourceService.getByKey(parentConceptKey)
-        def childrenWithTokens = i2b2HelperService.getChildPathsWithTokensFromParentKey(parentConceptKey)
+        def childrenWithTokens = i2b2HelperService.getChildPathsWithTokensFromParentKey(parent)
         def childrenWithAuth = i2b2HelperService.getAccess(childrenWithTokens, user)
         def authChildren = []
 
