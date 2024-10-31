@@ -113,11 +113,6 @@ PCAView.prototype.get_inputs = function (form_params) {
             "label" : "Do Use Experiment As Variable",
             "el" : document.getElementById("chkUseExperimentAsVariable"),
             "validations" : []
-        },
-        {
-            "label" : "Calculate z-score on the fly",
-            "el" : document.getElementById("chkCalculateZscore"),
-            "validations" : []
         }
     ];
 }

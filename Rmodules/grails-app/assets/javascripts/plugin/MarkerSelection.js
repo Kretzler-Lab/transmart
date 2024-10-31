@@ -126,11 +126,6 @@ MarkerSelectionView.prototype.get_inputs = function (form_params) {
             "label" : "Do Group by Subject",
             "el" : document.getElementById("chkGroupBySubject"),
             "validations" : []
-        },
-        {
-            "label" : "Calculate z-score on the fly",
-            "el" : document.getElementById("chkCalculateZscore"),
-            "validations" : []
         }
     ];
 }
