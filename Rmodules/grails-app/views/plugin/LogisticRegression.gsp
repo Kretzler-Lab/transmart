@@ -23,7 +23,7 @@
 			    <div class="highDimContainer">
 				<h3>Independent Variable</h3>
 				<span class="hd-notes">
-				    Drag a <b>numerical</b> or <b>high dimensional</b> concept from the Data Set Explorer Tree into the box below.
+				    Drag a <b>numerical</b> or <b>high dimensional</b> concept from the Navigate Terms tree into the box below.
 				    <br/><br/><br/><br/><br/><br/><br/><br/>
 				</span>
 				<div id='divIndependentVariable' class="queryGroupIncludeSmall highDimBox"></div>

@@ -24,7 +24,7 @@
 		    <div class="three-layout-left">
 			<fieldset class="inputFields">
 			    <h3>Time</h3>
-			    <div class="divInputLabel">Select time variable from the Data Set Explorer Tree and drag it into
+			    <div class="divInputLabel">Select time variable from the Navigate Terms tree and drag it into
 				the box.  For example, "Survival Time".
 				This variable is required.</div>
 			    <div id='divTimeVariable' class="queryGroupIncludeLong divInputBox"></div>

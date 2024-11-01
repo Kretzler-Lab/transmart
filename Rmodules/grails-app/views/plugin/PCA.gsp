@@ -19,7 +19,7 @@
 
 		    %{--High dimensional input--}%
 		    <div class="highDimContainer">
-			<span>Select a High Dimensional Data node from the Data Set Explorer Tree and drag it into the box.</span>
+			<span>Select a High Dimensional Data node from the “Navigate Terms tree and drag it into the box.</span>
 			<div id='divIndependentVariable' class="queryGroupIncludeSmall highDimBox"></div>
 			<div class="highDimBtns">
 			    <button type="button" onclick="highDimensionalData.gather_high_dimensional_data('divIndependentVariable')">High Dimensional Data</button>
