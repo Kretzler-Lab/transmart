@@ -28,7 +28,7 @@
 			    %{--Independent variable--}%
 			    <div class="highDimContainer">
 				<h3>Independent Variable</h3>
-				<span class="hd-notes">Select a variable from the Data Set Explorer Tree and drag it into the box.
+				<span class="hd-notes">Select a variable from the Navigate Terms tree and drag it into the box.
 				    At least one of the variables selected should be a continuous variable (e.g. Age) and one should be a
 				    categorical variable (e.g. Tumor Stage).  A continuous variable can be categorized using the binning
 				    option below.</span>
@@ -115,7 +115,7 @@
 			    %{--Dependent variable--}%
 			    <div class="highDimContainer">
 				<h3>Dependent Variable</h3>
-				<span class="hd-notes">Select a variable  from the Data Set Explorer Tree and drag it into the
+				<span class="hd-notes">Select a variable  from the Navigate Terms tree and drag it into the
 				    box.  At least one of the variables selected should be a continuous variable (e.g. Age) and one
 				    should be a categorical variable (e.g. Tumor Stage).  A continuous variable can be categorized
 				    using the binning option below.</span>

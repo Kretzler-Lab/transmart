@@ -656,18 +656,19 @@ function getSubsetQuerySummary(subset) {
 
         _e.find("item").each(function() {
 
+            var _concept = jQuery(this)
             if (_item.trim() != '' && _e.find("invert").html() == '0')
                 _item += " OR"
             else if (_item.trim() != '')
                 _item += " NOR"
 
-            _item += " " + _e.find("tooltip").html()
+            _item += " " + _concept.find("item_key").html().replace("\\\\Private Studies", "").replace("\\\\xtrials", "");
 
-            if (_e.find("constrain_by_value").size()) {
+            if (_concept.find("constrain_by_value").size()) {
                 _item += " CONSTRAINED"
             }
 
-            if (_e.find("constrain_by_modifier").size()) {
+            if (_concept.find("constrain_by_modifier").size()) {
                 _item += " MODIFIED"
             }
         })

@@ -33,7 +33,7 @@
 			    <span class='AnalysisHeader'>Concentration Variable</span>
 			    <br />
 			    <br />
-			    Select the concentration folder from the Data Set Explorer tree and drag it into the box.					
+			    Select the concentration folder from the Navigate Terms tree and drag it into the box.
 			</td>
 		    </tr>
 		    <tr>			

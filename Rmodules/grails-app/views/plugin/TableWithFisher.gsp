@@ -28,7 +28,7 @@
 			    %{--Independent variable--}%
 			    <div class="highDimContainer">
 				<h3>Independent Variable</h3>
-				<span class="hd-notes">Select two or more variables from the Data Set Explorer Tree and drag
+				<span class="hd-notes">Select two or more variables from the Navigate Terms tree and drag
 				    them into the box. A continuous variable may be selected and categorized by enabling the
 				    "Binning" below.</span>
 				<div id='divIndependentVariable' class="queryGroupIncludeSmall highDimBox"></div>
@@ -110,7 +110,7 @@
 			    %{--Dependent variable--}%
 			    <div class="highDimContainer">
 				<h3>Dependent Variable</h3>
-				<span class="hd-notes">Select two or more variables from the Data Set Explorer Tree and drag them into the box.
+				<span class="hd-notes">Select two or more variables from the Navigate Terms tree and drag them into the box.
 				    A continuous variable may be selected and categorized by enabling the "Binning" below.</span>
 				<div id='divDependentVariable' class="queryGroupIncludeSmall highDimBox"></div>
 				<div class="highDimBtns">

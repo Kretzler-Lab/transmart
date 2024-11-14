@@ -66,7 +66,7 @@ PCAView.prototype.get_form_params = function () {
         // get values
         var inputConceptPathVar = readConceptVariables("divIndependentVariable");
         var doUseExperimentAsVariable = inputArray[1].el.checked;
-        var calculateZscore = inputArray[2].el.checked;
+        var calculateZscore = true;
 
         // assign values to form parameters
         formParameters['jobType'] = 'PCA';
@@ -112,11 +112,6 @@ PCAView.prototype.get_inputs = function (form_params) {
         {
             "label" : "Do Use Experiment As Variable",
             "el" : document.getElementById("chkUseExperimentAsVariable"),
-            "validations" : []
-        },
-        {
-            "label" : "Calculate z-score on the fly",
-            "el" : document.getElementById("chkCalculateZscore"),
             "validations" : []
         }
     ];

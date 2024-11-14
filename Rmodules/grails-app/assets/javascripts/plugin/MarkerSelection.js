@@ -67,7 +67,7 @@ MarkerSelectionView.prototype.get_form_params = function () {
         var inputConceptPathVar = readConceptVariables("divIndependentVariable");
         var numOfMarkers = inputArray[1].el.value;
         var doGroupBySubject = inputArray[3].el.checked;
-        var calculateZscore = inputArray[4].el.checked;
+        var calculateZscore= true;
 
         // assign values to form parameters
         formParameters['jobType'] = 'MarkerSelection';
@@ -125,11 +125,6 @@ MarkerSelectionView.prototype.get_inputs = function (form_params) {
         {
             "label" : "Do Group by Subject",
             "el" : document.getElementById("chkGroupBySubject"),
-            "validations" : []
-        },
-        {
-            "label" : "Calculate z-score on the fly",
-            "el" : document.getElementById("chkCalculateZscore"),
             "validations" : []
         }
     ];

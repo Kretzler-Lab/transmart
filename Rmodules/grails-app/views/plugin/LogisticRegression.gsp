@@ -23,7 +23,7 @@
 			    <div class="highDimContainer">
 				<h3>Independent Variable</h3>
 				<span class="hd-notes">
-				    Drag a <b>numerical</b> or <b>high dimensional</b> concept from the Data Set Explorer Tree into the box below.
+				    Drag a <b>numerical</b> or <b>high dimensional</b> concept from the Navigate Terms tree into the box below.
 				    <br/><br/><br/><br/><br/><br/><br/><br/>
 				</span>
 				<div id='divIndependentVariable' class="queryGroupIncludeSmall highDimBox"></div>
@@ -51,7 +51,7 @@
 				<span class="hd-notes">
 				    For the binary response, among two possible outcomes (Commonly the generic terms success and
 				    failure are used for these two outcomes). Drag the two related <b>categorical concepts</b>
-				    from the tree into the box below (for example, Subjects with Malignant Vs. Subjects with
+				    from the Navigate Terms tree into the box below (for example, Subjects with Malignant Vs. Subjects with
 				    Benign Tumors). A folder may be dragged in to include the two leaf nodes under that folder,
 				    or a continuous or high dimensional variable may be selected and categorized using the binning option below.
 				    <br/> <i>NOTE: The top concept or the first bin will always be designated a value of 1 (success) and

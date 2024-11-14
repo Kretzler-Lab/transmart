@@ -28,11 +28,11 @@
 			    <div class="highDimContainer">
 				<h3>Time/Measurement Concepts</h3>
 				<span class="hd-notes">
-				    %{--Drag one or more <strong>numerical</strong> concepts from the tree into the box below or--}%
+				    %{--Drag one or more <strong>numerical</strong> concepts from the Navigate Terms tree into the box below or--}%
 				    %{--high dimensional node. The concepts must come from a data node (Biomarker Data or Clinical--}%
 				    %{--Data).--}%
 
-				    Drag one or multiple numerical or high dimensional nodes from the tree into box below.
+				    Drag one or multiple numerical or high dimensional nodes from the Navigate Terms tree into box below.
 
 				</span>
 				<div id='divDependentVariable' class="queryGroupIncludeSmall highDimBox"></div>
@@ -65,7 +65,7 @@
 				    %{--subjects into groups (for example, Treatment Groups). A folder may be dragged--}%
 				    %{--in to include all leaf nodes under that folder. Each group will be plotted as a--}%
 				    %{--distinct line on the graph.--}%
-				    Drag one or multiple nodes from the tree into box below. Node should be categorical
+				    Drag one or multiple nodes from the Navigate Terms tree into box below. Node should be categorical
 				    (Numerical or High Dimensional with binning).
 				</span>
 				<div id='divGroupByVariable' class="queryGroupIncludeSmall highDimBox"></div>
