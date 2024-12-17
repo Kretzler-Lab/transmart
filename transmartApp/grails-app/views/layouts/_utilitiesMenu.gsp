@@ -1,7 +1,6 @@
 <%-- Quick, self-contained replica of the Ext utilities menu, for use on pages without the Ext library (faceted search) --%>
 <g:javascript>
     function toggleMenu() {
-        console.log('Toggle menu triggered')
         jQuery('#utilitiesMenu').fadeToggle();
     }
 
