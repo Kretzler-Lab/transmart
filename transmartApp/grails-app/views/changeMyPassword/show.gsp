@@ -2,12 +2,13 @@
 <html>
     <head>
 	<asset:stylesheet href="main_mod.css"/>
+    <asset:javascript src="jquery-plugin.js"/>
 	<title>Change My Password</title>
     </head>
 
     <body>
 	<div id="header-div" class="header-div">
-	    <g:render template='/layouts/commonheader' model="[app: 'changeMyPassword']"/>
+	    <g:render template='/layouts/commonheader' model="[app: 'changeMyPassword', utilitiesMenu: 'true']"/>
 	</div>
 
 	<div class="body" style="padding-left: 15%">
