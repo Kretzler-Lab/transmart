@@ -2,6 +2,7 @@
 <html>
     <head>
 	<asset:stylesheet href="main_mod.css"/>
+    <asset:javascript src="jquery-plugin.js"/>
 	<title>Change My Password</title>
     </head>
 
