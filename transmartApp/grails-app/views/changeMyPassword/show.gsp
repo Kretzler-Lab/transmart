@@ -7,7 +7,7 @@
 
     <body>
 	<div id="header-div" class="header-div">
-	    <g:render template='/layouts/commonheader' model="[app: 'changeMyPassword']"/>
+	    <g:render template='/layouts/commonheader' model="[app: 'changeMyPassword', utilitiesMenu: 'true']"/>
 	</div>
 
 	<div class="body" style="padding-left: 15%">

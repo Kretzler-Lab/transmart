@@ -96,7 +96,7 @@ abstract class HeatmapSupportAbstract extends GebReportingSpecTransmart {
 	void confirmAnalysisResults() {
             assert at(params.modelPageClass)
             assert resultOutputHeader.text() == params.resultsOutputHeader
-            assert resultOutputHint.text() == "Click on the heatmap image to open it in a new window as this may increase readability."
+            assert resultOutputHint.text() == "Click on the heatmap image to download as this may increase readability."
             assert resultsImageUrl.contains(params.resultsImageURLLabel)
 	}
 }
