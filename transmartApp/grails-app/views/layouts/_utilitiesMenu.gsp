@@ -32,7 +32,7 @@
 #utilitiesMenuList {
     background: transparent;
     border: 0 none;
-    list-style: none;
+    list-style: none !important;
     margin: 10px 0 10px 10px;
 }
 
