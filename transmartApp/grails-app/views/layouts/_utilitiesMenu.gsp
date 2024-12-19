@@ -11,6 +11,16 @@
     });
 </g:javascript>
 <style type="text/css">
+ul {
+    list-style: none !important;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none !important;
+}
+
 #utilitiesMenu {
     font: normal 11px tahoma, arial, sans-serif;
     border: 1px solid #718bb7;
