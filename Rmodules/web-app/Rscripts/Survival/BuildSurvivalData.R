@@ -62,7 +62,7 @@ snptype.category = ''
     dataFile$PATIENT_NUM <- as.integer(as.character(dataFile$PATIENT_NUM))
 	
 	#Create a matrix with unique patient_nums.
-	finalData <- matrix(unique(dataFile$PATIENT_NUM));
+	finalData <- data.frame(PATIENT_NUM = unique(dataFile$PATIENT_NUM))
 	
 	#Name the column.
 	colnames(finalData) <- c("PATIENT_NUM")
