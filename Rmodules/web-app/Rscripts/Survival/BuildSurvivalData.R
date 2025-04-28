@@ -144,7 +144,12 @@ snptype.category = ''
 		}
 	}
 	###################################	
-	
+	if ("CATEGORY" %in% colnames(finalData)) {
+    finalData$CATEGORY <- as.integer(as.character(finalData$CATEGORY))
+    }
+    if ("GROUP" %in% colnames(finalData)) {
+        finalData$GROUP <- as.integer(as.character(finalData$GROUP))
+    }
 	#We need MASS to dump the matrix to a file.
 	require(MASS)
 	
