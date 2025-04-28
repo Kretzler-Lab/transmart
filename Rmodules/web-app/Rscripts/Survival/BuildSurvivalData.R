@@ -57,6 +57,9 @@ snptype.category = ''
 	
 	#Split the data by the CONCEPT_CD.
 	splitData <- split(dataFile,dataFile$CONCEPT_PATH);
+    
+    # Convert PATIENT_NUM to integer in the dataFile
+    dataFile$PATIENT_NUM <- as.integer(as.character(dataFile$PATIENT_NUM))
 	
 	#Create a matrix with unique patient_nums.
 	finalData <- matrix(unique(dataFile$PATIENT_NUM));
@@ -144,9 +147,7 @@ snptype.category = ''
 		}
 	}
 	###################################	
-	if ("PATIENT_NUM" %in% colnames(finalData)) {
-    finalData$PATIENT_NUM <- as.integer(as.character(finalData$PATIENT_NUM))
-    }
+	
 	#We need MASS to dump the matrix to a file.
 	require(MASS)
 	
