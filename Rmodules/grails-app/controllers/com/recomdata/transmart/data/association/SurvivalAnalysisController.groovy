@@ -171,17 +171,20 @@ class SurvivalAnalysisController {
 		String[] strArray = line.split()
 		int columnCount = strArray.size()
 		int columnStart = 1
-		int iskip
+		int iskip = 8 - columnCount
 
 		//For each class, extract the name.
 		if (strArray[0].contains('classList=')) {
 		    bufBody << '<tr><th>' << strArray[0].replace('classList=', '').replace('_', ' ') << '</th>'
-		    iskip = 8 - columnCount
 		}
 		else {
 		    bufBody << '<tr><th>All Subjects</th>'
-		    columnStart = 0
-		    iskip = 7 - columnCount
+		    // skip a [1,] element if present in start of strArray
+		    // else take first value
+		    if(!strArray[0].contains('[1,]')) {
+			columnStart = 0
+			iskip = 7 - columnCount
+		    }
 		}
 
 		for (int i = columnStart; i < columnCount; i++) {
