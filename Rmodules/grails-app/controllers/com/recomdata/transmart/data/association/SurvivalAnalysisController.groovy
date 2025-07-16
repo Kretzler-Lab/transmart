@@ -137,7 +137,7 @@ class SurvivalAnalysisController {
 	for (resultItem in resultsItems) {
 	    sb << '<tr>'
 	    sb << '<th>' << resultItem.key << '</th>'
-	    sb << '<td>' << resultItem.value.COX << '/td>'
+	    sb << '<td>' << resultItem.value.COX << '</td>'
 	    sb << '<td>' << resultItem.value.HAZARD << '</td>'
 	    sb << '<td>' << resultItem.value.UP << '</td>'
 	    sb << '<td>' << resultItem.value.DOWN << '</td>'
