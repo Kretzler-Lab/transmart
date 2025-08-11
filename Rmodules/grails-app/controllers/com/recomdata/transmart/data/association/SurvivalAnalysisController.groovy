@@ -177,15 +177,18 @@ class SurvivalAnalysisController {
 		if (strArray[0].contains('classList=')) {
 		    bufBody << '<tr><th>' << strArray[0].replace('classList=', '').replace('_', ' ') << '</th>'
 		}
-		else {
-		    bufBody << '<tr><th>All Subjects</th>'
-		    // skip a [1,] element if present in start of strArray
-		    // else take first value
-		    if(!strArray[0].contains('[1,]')) {
-			columnStart = 0
-			iskip = 7 - columnCount
-		    }
-		}
+				else {
+            bufBody << '<tr><th>All Subjects</th>'
+            // if [1,] is present, set value to '1', else take first value
+            if (strArray[0].contains('[1,]')) {
+                strArray[0] = '1'
+                columnStart = 0
+                iskip = 7 - columnCount
+            } else {
+                columnStart = 0
+                iskip = 7 - columnCount
+            }
+        }
 
 		for (int i = columnStart; i < columnCount; i++) {
 		    String value = strArray[i]
