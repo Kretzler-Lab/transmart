@@ -72,7 +72,7 @@ class SurvivalAnalysisController {
 		Matcher matcher = line =~ /\s*n\=\s*([0-9]+)\,\s*number of events\=\s*([0-9]+)\s*/
 		if (matcher.matches()) {
 		    //Add a table with overall number of subjects and events.
-		    sb << '<tr><th>Number of Subjects Test</th><td>' << matcher[0][1] << '</td></tr>'
+		    sb << '<tr><th>Number of Subjects</th><td>' << matcher[0][1] << '</td></tr>'
 		    sb << '<tr><th>Number of Events</th><td>' << matcher[0][2] << '</td></tr>'
 		}
 	    }
@@ -158,7 +158,7 @@ class SurvivalAnalysisController {
 	boolean recordsLine = false
 
 	bufHeader << '<table class="AnalysisResults"><tr><th>Subset</th>'
-	bufHeader << '<th>Number of Subjects Test</th><th>Max Subjects</th>'
+	bufHeader << '<th>Number of Subjects</th><th>Max Subjects</th>'
 	bufHeader << '<th>Subjects at Start</th><th>Number of Events</th>'
 	bufHeader << '<th>Median Time Value</th><th>Lower Range of Time Variable, 95% Confidence Interval</th>'
 	bufHeader << '<th>Upper Range of Time Variable, 95% Confidence Interval</th></tr>'
