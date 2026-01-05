@@ -137,7 +137,7 @@ class SurvivalAnalysisController {
 	for (resultItem in resultsItems) {
 	    sb << '<tr>'
 	    sb << '<th>' << resultItem.key << '</th>'
-	    sb << '<td>' << resultItem.value.COX << '/td>'
+	    sb << '<td>' << resultItem.value.COX << '</td>'
 	    sb << '<td>' << resultItem.value.HAZARD << '</td>'
 	    sb << '<td>' << resultItem.value.UP << '</td>'
 	    sb << '<td>' << resultItem.value.DOWN << '</td>'
@@ -171,18 +171,24 @@ class SurvivalAnalysisController {
 		String[] strArray = line.split()
 		int columnCount = strArray.size()
 		int columnStart = 1
-		int iskip
+		int iskip = 8 - columnCount
 
 		//For each class, extract the name.
 		if (strArray[0].contains('classList=')) {
 		    bufBody << '<tr><th>' << strArray[0].replace('classList=', '').replace('_', ' ') << '</th>'
-		    iskip = 8 - columnCount
 		}
-		else {
-		    bufBody << '<tr><th>All Subjects</th>'
-		    columnStart = 0
-		    iskip = 7 - columnCount
-		}
+				else {
+            bufBody << '<tr><th>All Subjects Test</th>'
+            // if [1,] is present, set value to '1', else take first value
+            if (strArray[0].contains('[1,]')) {
+                strArray[0] = '1'
+                columnStart = 0
+                iskip = 7 - columnCount
+            } else {
+                columnStart = 0
+                iskip = 7 - columnCount
+            }
+        }
 
 		for (int i = columnStart; i < columnCount; i++) {
 		    String value = strArray[i]
