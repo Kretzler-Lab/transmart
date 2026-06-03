@@ -190,20 +190,27 @@ function renderCohortSummary(){
         }
 
     }
-    if(Ext.getCmp('dataAssociationPanel').rendered) {
-	if ("" == cohortsSummary){
-            // hide cohort Summary & show warning
-            Ext.get('cohortSummary').hide();
-            Ext.get('cohortWarningMsg').show();
-            Ext.fly('cohortWarningMsg').update("WARNING: You have not selected a study and the analysis will not work. " +
-					       "Please go back to the Comparison tab and make a cohort selection.").addClass("warning");
-	} else {
-            // hide warning & show cohort Summary
-            Ext.get('cohortSummary').hide();
-            Ext.fly('cohortSummary').update(cohortsSummary);
-            Ext.get('cohortWarningMsg').hide();
-            Ext.get('cohortSummary').show();
-	}
+if (Ext.getCmp('dataAssociationPanel').rendered) {
+    var cohortSummaryEl = Ext.get('cohortSummary');
+    var cohortWarningEl = Ext.get('cohortWarningMsg');
+
+    if ("" == cohortsSummary) {
+        // hide cohort Summary & show warning
+        if (cohortSummaryEl) cohortSummaryEl.hide();
+        if (cohortWarningEl) {
+            cohortWarningEl.show();
+            cohortWarningEl.update("WARNING: You have not selected a study and the analysis will not work. " +
+                                   "Please go back to the Comparison tab and make a cohort selection.");
+            cohortWarningEl.addClass("warning");
+        }
+    } else {
+        // hide warning & show cohort Summary
+        if (cohortWarningEl) cohortWarningEl.hide();
+        if (cohortSummaryEl) {
+            cohortSummaryEl.hide();
+            cohortSummaryEl.update(cohortsSummary);
+            cohortSummaryEl.show();
+        }
     }
 }
 
