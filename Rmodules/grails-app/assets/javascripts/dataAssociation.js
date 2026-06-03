@@ -213,6 +213,7 @@ if (Ext.getCmp('dataAssociationPanel').rendered) {
         }
     }
 }
+}
 
 function checkPreviousAnalysis() {
     //If the user clicks submit but they've run a analysis recently check with them to make sure they want to clear the results.
