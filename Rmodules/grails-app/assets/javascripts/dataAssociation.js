@@ -194,8 +194,8 @@ function renderCohortSummary() {
 
     // Scope lookups to the live panel DOM to avoid stale/detached node references
     var panelEl = panel.getEl();
-    var cohortSummaryEl = panelEl.child('#cohortSummary');
-    var cohortWarningEl = panelEl.child('#cohortWarningMsg');
+	var cohortWarningEl = Ext.get(document.getElementById('cohortWarningMsg'));
+	var cohortSummaryEl = Ext.get(document.getElementById('cohortSummary'));
 
     if ("" == cohortsSummary) {
         if (cohortSummaryEl) cohortSummaryEl.hide();
