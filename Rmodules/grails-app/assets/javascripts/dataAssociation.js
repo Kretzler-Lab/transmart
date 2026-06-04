@@ -206,16 +206,30 @@ function renderCohortSummary() {
             cohortWarningEl.show();
         }
     } else {
-        if (cohortWarningEl) {
-            cohortWarningEl.hide();
-            cohortWarningEl.update("");
-            cohortWarningEl.removeClass("warning");
-        }
-        if (cohortSummaryEl) {
-            cohortSummaryEl.update(cohortsSummary);
-            cohortSummaryEl.show();
-        }
+    console.log('=== renderCohortSummary ELSE branch ===');
+    console.log('cohortsSummary:', cohortsSummary);
+    console.log('panel el:', panelEl);
+    console.log('cohortWarningEl found:', cohortWarningEl);
+    console.log('cohortSummaryEl found:', cohortSummaryEl);
+    
+    if (cohortWarningEl) {
+        console.log('warning el DOM node:', cohortWarningEl.dom);
+        console.log('warning el in document:', document.body.contains(cohortWarningEl.dom));
+        console.log('warning el current display:', cohortWarningEl.dom.style.display);
+        console.log('warning el current visibility:', cohortWarningEl.dom.style.visibility);
+        cohortWarningEl.hide();
+        cohortWarningEl.update("");
+        cohortWarningEl.removeClass("warning");
+        console.log('after hide - display:', cohortWarningEl.dom.style.display);
+    } else {
+        console.log('cohortWarningEl is NULL - element not found in panel');
     }
+
+    if (cohortSummaryEl) {
+        cohortSummaryEl.update(cohortsSummary);
+        cohortSummaryEl.show();
+    }
+}
 }
 
 function checkPreviousAnalysis() {
