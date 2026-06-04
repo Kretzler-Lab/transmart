@@ -213,6 +213,7 @@ function renderCohortSummary() {
             cohortSummaryEl.update(cohortsSummary);
             cohortSummaryEl.show();
         }
+		Ext.getCmp('dataAssociationPanel').doLayout();
     }
 }
 
