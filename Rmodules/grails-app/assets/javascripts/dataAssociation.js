@@ -4,6 +4,10 @@ Ext.onReady(function(){
     advancedWorkflowMenu();
 });
 
+Ext.getCmp('dataAssociationPanel').on('activate', function() {
+    renderCohortSummary();
+});
+
 var analysisConcept = null;
 var module_array;
 
