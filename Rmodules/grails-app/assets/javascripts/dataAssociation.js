@@ -177,33 +177,42 @@ function onItemClick(item) {
       });*/
 }
 
-function renderCohortSummary(){
-    var cohortsSummary=""
+function renderCohortSummary() {
+    var cohortsSummary = "";
 
-    // get selected cohort summary
-    for(var i = 1; i<=GLOBAL.NumOfSubsets; i++) {
-        var currentQuery = getQuerySummary(i)
-        if(currentQuery != ""){
-            cohortsSummary += "Subset " + i + ": "
-            cohortsSummary += currentQuery
-            cohortsSummary += "<br>"
+    for (var i = 1; i <= GLOBAL.NumOfSubsets; i++) {
+        var currentQuery = getQuerySummary(i);
+        if (currentQuery != "") {
+            cohortsSummary += "Subset " + i + ": ";
+            cohortsSummary += currentQuery;
+            cohortsSummary += "<br>";
         }
-
     }
-    if(Ext.getCmp('dataAssociationPanel').rendered) {
-	if ("" == cohortsSummary){
-            // hide cohort Summary & show warning
-            Ext.get('cohortSummary').hide();
-            Ext.get('cohortWarningMsg').show();
-            Ext.fly('cohortWarningMsg').update("WARNING: You have not selected a study and the analysis will not work. " +
-					       "Please go back to the Comparison tab and make a cohort selection.").addClass("warning");
-	} else {
-            // hide warning & show cohort Summary
-            Ext.get('cohortSummary').hide();
-            Ext.fly('cohortSummary').update(cohortsSummary);
-            Ext.get('cohortWarningMsg').hide();
-            Ext.get('cohortSummary').show();
-	}
+
+    var panel = Ext.getCmp('dataAssociationPanel');
+    if (!panel || !panel.rendered) return;
+
+    var cohortSummaryEl = Ext.get(document.getElementById('cohortSummary'));
+    var cohortWarningEl = Ext.get(document.getElementById('cohortWarningMsg'));
+
+    // Elements not in DOM yet - retry after a short delay
+    if (!cohortSummaryEl || !cohortWarningEl) {
+        setTimeout(function() { renderCohortSummary(); }, 50);
+        return;
+    }
+
+    if ("" == cohortsSummary) {
+        cohortSummaryEl.hide();
+        cohortWarningEl.update("WARNING: You have not selected a study and the analysis will not work. " +
+                               "Please go back to the Comparison tab and make a cohort selection.");
+        cohortWarningEl.addClass("warning");
+        cohortWarningEl.show();
+    } else {
+        cohortWarningEl.hide();
+        cohortWarningEl.update("");
+        cohortWarningEl.removeClass("warning");
+        cohortSummaryEl.update(cohortsSummary);
+        cohortSummaryEl.show();
     }
 }
 
