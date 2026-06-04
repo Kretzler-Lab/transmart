@@ -180,7 +180,6 @@ function onItemClick(item) {
 function renderCohortSummary() {
     var cohortsSummary = "";
 
-    // get selected cohort summary
     for (var i = 1; i <= GLOBAL.NumOfSubsets; i++) {
         var currentQuery = getQuerySummary(i);
         if (currentQuery != "") {
@@ -190,10 +189,13 @@ function renderCohortSummary() {
         }
     }
 
-    if (!Ext.getCmp('dataAssociationPanel').rendered) return;
+    var panel = Ext.getCmp('dataAssociationPanel');
+    if (!panel || !panel.rendered) return;
 
-    var cohortSummaryEl = Ext.get('cohortSummary');
-    var cohortWarningEl = Ext.get('cohortWarningMsg');
+    // Scope lookups to the live panel DOM to avoid stale/detached node references
+    var panelEl = panel.getEl();
+    var cohortSummaryEl = panelEl.child('#cohortSummary');
+    var cohortWarningEl = panelEl.child('#cohortWarningMsg');
 
     if ("" == cohortsSummary) {
         if (cohortSummaryEl) cohortSummaryEl.hide();
@@ -213,8 +215,6 @@ function renderCohortSummary() {
             cohortSummaryEl.update(cohortsSummary);
             cohortSummaryEl.show();
         }
-		Ext.getCmp('dataAssociationPanel').doLayout();
-		Ext.getCmp('dataAssociationPanel').ownerCt.doLayout();
     }
 }
 
