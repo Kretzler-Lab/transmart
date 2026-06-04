@@ -192,10 +192,12 @@ function renderCohortSummary() {
     var panel = Ext.getCmp('dataAssociationPanel');
     if (!panel || !panel.rendered) return;
 
-    // Scope lookups to the live panel DOM to avoid stale/detached node references
-    var panelEl = panel.getEl();
-	var cohortWarningEl = Ext.get(document.getElementById('cohortWarningMsg'));
-	var cohortSummaryEl = Ext.get(document.getElementById('cohortSummary'));
+    // Use stable ID and bypass ExtJS cache with direct DOM lookup
+    var bodyEl = Ext.get(document.getElementById('dataAssociationBody'));
+    if (!bodyEl) return;
+
+    var cohortSummaryEl = Ext.get(document.getElementById('cohortSummary'));
+    var cohortWarningEl = Ext.get(document.getElementById('cohortWarningMsg'));
 
     if ("" == cohortsSummary) {
         if (cohortSummaryEl) cohortSummaryEl.hide();
@@ -206,42 +208,16 @@ function renderCohortSummary() {
             cohortWarningEl.show();
         }
     } else {
-    console.log('=== renderCohortSummary ELSE branch ===');
-    console.log('cohortsSummary:', cohortsSummary);
-    console.log('panel el:', panelEl);
-    console.log('cohortWarningEl found:', cohortWarningEl);
-    console.log('cohortSummaryEl found:', cohortSummaryEl);
-		console.log('global cohortWarningEl:', Ext.get('cohortWarningMsg'));
-console.log('global cohortSummaryEl:', Ext.get('cohortSummary'));
-
-// Walk up the DOM to see what panel actually contains them
-var el = Ext.get('cohortWarningMsg');
-if (el) {
-    var node = el.dom.parentNode;
-    while (node) {
-        console.log('parent:', node.id, node.className);
-        node = node.parentNode;
+        if (cohortWarningEl) {
+            cohortWarningEl.hide();
+            cohortWarningEl.update("");
+            cohortWarningEl.removeClass("warning");
+        }
+        if (cohortSummaryEl) {
+            cohortSummaryEl.update(cohortsSummary);
+            cohortSummaryEl.show();
+        }
     }
-}
-    
-    if (cohortWarningEl) {
-        console.log('warning el DOM node:', cohortWarningEl.dom);
-        console.log('warning el in document:', document.body.contains(cohortWarningEl.dom));
-        console.log('warning el current display:', cohortWarningEl.dom.style.display);
-        console.log('warning el current visibility:', cohortWarningEl.dom.style.visibility);
-        cohortWarningEl.hide();
-        cohortWarningEl.update("");
-        cohortWarningEl.removeClass("warning");
-        console.log('after hide - display:', cohortWarningEl.dom.style.display);
-    } else {
-        console.log('cohortWarningEl is NULL - element not found in panel');
-    }
-
-    if (cohortSummaryEl) {
-        cohortSummaryEl.update(cohortsSummary);
-        cohortSummaryEl.show();
-    }
-}
 }
 
 function checkPreviousAnalysis() {
