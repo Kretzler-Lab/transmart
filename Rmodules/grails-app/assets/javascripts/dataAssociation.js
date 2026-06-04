@@ -177,42 +177,43 @@ function onItemClick(item) {
       });*/
 }
 
-function renderCohortSummary(){
-    var cohortsSummary=""
+function renderCohortSummary() {
+    var cohortsSummary = "";
 
     // get selected cohort summary
-    for(var i = 1; i<=GLOBAL.NumOfSubsets; i++) {
-        var currentQuery = getQuerySummary(i)
-        if(currentQuery != ""){
-            cohortsSummary += "Subset " + i + ": "
-            cohortsSummary += currentQuery
-            cohortsSummary += "<br>"
+    for (var i = 1; i <= GLOBAL.NumOfSubsets; i++) {
+        var currentQuery = getQuerySummary(i);
+        if (currentQuery != "") {
+            cohortsSummary += "Subset " + i + ": ";
+            cohortsSummary += currentQuery;
+            cohortsSummary += "<br>";
         }
-
     }
-if (Ext.getCmp('dataAssociationPanel').rendered) {
+
+    if (!Ext.getCmp('dataAssociationPanel').rendered) return;
+
     var cohortSummaryEl = Ext.get('cohortSummary');
     var cohortWarningEl = Ext.get('cohortWarningMsg');
 
     if ("" == cohortsSummary) {
-        // hide cohort Summary & show warning
         if (cohortSummaryEl) cohortSummaryEl.hide();
         if (cohortWarningEl) {
-            cohortWarningEl.show();
             cohortWarningEl.update("WARNING: You have not selected a study and the analysis will not work. " +
                                    "Please go back to the Comparison tab and make a cohort selection.");
             cohortWarningEl.addClass("warning");
+            cohortWarningEl.show();
         }
     } else {
-        // hide warning & show cohort Summary
-        if (cohortWarningEl) cohortWarningEl.hide();
+        if (cohortWarningEl) {
+            cohortWarningEl.hide();
+            cohortWarningEl.update("");
+            cohortWarningEl.removeClass("warning");
+        }
         if (cohortSummaryEl) {
-            cohortSummaryEl.hide();
             cohortSummaryEl.update(cohortsSummary);
             cohortSummaryEl.show();
         }
     }
-}
 }
 
 function checkPreviousAnalysis() {
