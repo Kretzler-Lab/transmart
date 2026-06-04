@@ -211,6 +211,18 @@ function renderCohortSummary() {
     console.log('panel el:', panelEl);
     console.log('cohortWarningEl found:', cohortWarningEl);
     console.log('cohortSummaryEl found:', cohortSummaryEl);
+		console.log('global cohortWarningEl:', Ext.get('cohortWarningMsg'));
+console.log('global cohortSummaryEl:', Ext.get('cohortSummary'));
+
+// Walk up the DOM to see what panel actually contains them
+var el = Ext.get('cohortWarningMsg');
+if (el) {
+    var node = el.dom.parentNode;
+    while (node) {
+        console.log('parent:', node.id, node.className);
+        node = node.parentNode;
+    }
+}
     
     if (cohortWarningEl) {
         console.log('warning el DOM node:', cohortWarningEl.dom);
