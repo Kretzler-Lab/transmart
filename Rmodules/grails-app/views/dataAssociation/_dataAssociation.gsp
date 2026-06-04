@@ -22,12 +22,11 @@
 	</label>
 	<hr style="height: 1px; margin-top: 5px"/>
 	%{--display selected cohort--}%
-	<label for="cohortSummary">
-		<span>Cohorts:</span>
-		<span id="cohortWarningMsg" style="color: red">WARNING: You have not selected a study and the analysis will not work. Please go back to the Comparison tab and make a cohort selection.
-		</span>
-		<div id="cohortSummary"></div>
-	</label>
+<label for="cohortSummary">
+    <span>Cohorts:</span>
+    <span id="cohortWarningMsg" style="display:none; color: red"></span>
+    <div id="cohortSummary" style="display:none;"></div>
+</label>
     </div>
   
 </div>
