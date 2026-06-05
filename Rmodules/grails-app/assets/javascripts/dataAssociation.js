@@ -195,7 +195,6 @@ function renderCohortSummary() {
     var cohortSummaryEl = Ext.get(document.getElementById('cohortSummary'));
     var cohortWarningEl = Ext.get(document.getElementById('cohortWarningMsg'));
 
-    // Elements not in DOM yet - retry after a short delay
     if (!cohortSummaryEl || !cohortWarningEl) {
         setTimeout(function() { renderCohortSummary(); }, 50);
         return;
