@@ -243,8 +243,9 @@ function loadPluginView(){
     if (typeof window[loadViewName] === 'function') {
         window[loadViewName]();
     } else {
-        console.error('loadPluginView: function not found:', loadViewName, '(analysis value:', selectedAnalysis + ')');
-    }}
+        console.warn('loadPluginView: waiting for', loadViewName, '...');
+        setTimeout(function() { loadPluginView(); }, 50);
+    }
 
 //This function fires when an item is dropped onto one of the independent/dependent variable DIVs in the data association tool.
 function dropOntoVariableSelection(source, e, data)
